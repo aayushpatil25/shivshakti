@@ -8,9 +8,9 @@ export const brand = {
   wordmark: 'SHIVSHAKTI',
   tagline: 'Creative Hub',
   /** REPLACE: WhatsApp number, digits only, with country code (91 for India). */
-  whatsapp: '+91 90755 88486',
+  whatsapp: '+919075588486',
   /** REPLACE: number shown on the page. */
-  phoneDisplay: '+91 90755 88486',
+  phoneDisplay: '+919075588486',
   /** REPLACE */
   email: 'shivshakticreativehub@gmail.com',
   /** REPLACE */
