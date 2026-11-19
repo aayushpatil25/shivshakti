@@ -12,7 +12,7 @@ export const brand = {
   /** REPLACE: number shown on the page. */
   phoneDisplay: '+91 90755 88486',
   /** REPLACE */
-  email: 'hello@shivshakti.example',
+  email: 'shivshakticreativehub@gmail.com',
   /** REPLACE */
   address: 'Dahanu Agar – 401601',
   /** REPLACE (leave '' to hide). */
