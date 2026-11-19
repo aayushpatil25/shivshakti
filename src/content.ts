@@ -16,7 +16,7 @@ export const brand = {
   /** REPLACE */
   address: 'Dahanu Agar – 401601',
   /** REPLACE (leave '' to hide). */
-  instagram: 'https://instagram.com/shivshakti',
+  instagram: 'https://www.instagram.com/shiv_shakti_creatice_hub/',
   /** OPTIONAL: your logo, e.g. '/images/logo.png' (put the file in public/images/). '' = built-in text mark. */
   logo: '/images/logo.png',
 };
