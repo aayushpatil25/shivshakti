@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+/* Lenis' own stylesheet. */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis:not(.lenis-autoToggle).lenis-stopped {
+  overflow: clip;
+}
+
+/* Colours, fonts and type scale. Change the palette here. */
+@theme {
+  --font-display: "Archivo Black", "Arial Black", sans-serif;
+  /* Hero headline: Playfair Display Italic. */
+  --font-hero: "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-sans: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "DM Mono", ui-monospace, Menlo, monospace;
+
+  --color-paper: #FAF8FF;   /* page background — Background */
+  --color-paper-2: #F1ECFB; /* cards */
+  --color-bark: #21113F;    /* text — Primary */
+  --color-muted: #6B5F85;
+  --color-saffron: #FF6B61; /* buttons / fills — Accent (coral) */
+  --color-saffron-deep: #7545D6; /* accent text — Secondary (violet) */
+  --color-highlight: #FFC857; /* tags, sparkles — Highlight (gold) */
+
+  --text-hero: clamp(2.5rem, 6.4vw, 6.5rem);
+  --text-hero--line-height: 0.98;
+  --text-display: clamp(1.9rem, 4vw, 3.75rem);
+  --text-display--line-height: 1.04;
+  --text-body: clamp(0.9375rem, 1.05vw, 1.0625rem);
+  --text-body--line-height: 1.65;
+  --text-label: 0.6875rem;
+  --text-label--line-height: 1.3;
+  --text-label--letter-spacing: 0.16em;
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    background: var(--color-paper);
+  }
+  body {
+    margin: 0;
+    background: var(--color-paper);
+    color: var(--color-bark);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: clip;
+  }
+  ::selection {
+    background: var(--color-highlight);
+    color: var(--color-bark);
+  }
+  :focus-visible {
+    outline: 1.5px solid var(--color-saffron-deep);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+}
+
+@layer utilities {
+  .h-screen-s {
+    height: 100svh;
+  }
+  [data-reveal] {
+    opacity: 0;
+    transform: translate3d(0, 24px, 0);
+    transition:
+      opacity 1s cubic-bezier(0.2, 0.7, 0.1, 1),
+      transform 1s cubic-bezier(0.2, 0.7, 0.1, 1);
+  }
+  [data-reveal].is-in {
+    opacity: 1;
+    transform: none;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    [data-reveal] {
+      transform: none;
+    }
+  }
+}
+
+@keyframes step-in {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 12px, 0);
+  }
+}
